@@ -11,11 +11,11 @@ int main(){
         int len = strlen(str);
         for(int i=0;i<len;i++){
             if(str[i] == '('){
-                st.push(0);
+                st.push(-1);
             }
             else if(str[i] == ')'){
                 sum = 0;
-                while(!st.empty() && st.top() != 0){
+                while(!st.empty() && st.top() != -1){
                     sum+=st.top();
                     st.pop();
                 }
